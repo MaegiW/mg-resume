@@ -24,14 +24,14 @@ function Skills() {
         icon: <Code2 className="w-6 h-6 text-blue-500" />,
       },
       {
-        name: "JavaScript",
-        description: "Web Logic",
-        icon: <Monitor className="w-6 h-6 text-yellow-500" />,
-      },
-      {
         name: "HTML/CSS",
         description: "Structure & Style",
         icon: <Layout className="w-6 h-6 text-orange-500" />,
+      },
+      {
+        name: "JavaScript",
+        description: "Web Logic",
+        icon: <Monitor className="w-6 h-6 text-yellow-500" />,
       },
       {
         name: "Tailwind",
@@ -60,11 +60,6 @@ function Skills() {
         description: "Design",
         icon: <Layers className="w-6 h-6 text-pink-500" />,
       },
-      {
-        name: "Testing",
-        description: "Quality",
-        icon: <Cpu className="w-6 h-6 text-red-500" />,
-      },
     ],
   };
 
@@ -79,46 +74,49 @@ function Skills() {
   }, []);
 
   return (
-    <section id="skills" className="">
-      <div className="max-w-full h-screen  mx-auto bg-white rounded-lg shadow-md ">
-        <h2 className="text-2xl font-bold mb-4 text-center">Skills</h2>
-        <div className="flex gap-4 justify-center mb-8">
-          <button
-            onClick={() => setFilter("all")}
-            className={`px-6 py-2 rounded-lg font-medium transition-all duration-300 ${
-              filter === "all"
-                ? "bg-blue-500 text-white shadow-md"
-                : "bg-gray-100 text-gray-700 hover:bg-gray-200"
-            }`}
-          >
-            All
-          </button>
-          <button
-            onClick={() => setFilter("frontend")}
-            className={`px-6 py-2 rounded-lg font-medium transition-all duration-300 ${
-              filter === "frontend"
-                ? "bg-blue-500 text-white shadow-md"
-                : "bg-gray-100 text-gray-700 hover:bg-gray-200"
-            }`}
-          >
-            Frontend
-          </button>
-          <button
-            onClick={() => setFilter("others")}
-            className={`px-6 py-2 rounded-lg font-medium transition-all duration-300 ${
-              filter === "others"
-                ? "bg-blue-500 text-white shadow-md"
-                : "bg-gray-100 text-gray-700 hover:bg-gray-200"
-            }`}
-          >
-            Others
-          </button>
-        </div>
-        <div className="grid grid-cols-3 gap-4">
+    <section
+      id="skills"
+      className="w-full h-screen mx-auto bg-white rounded-lg shadow-md"
+    >
+      <h2 className="text-2xl font-bold mb-4 text-center pt-24">Skills</h2>
+      <div className="flex gap-4 justify-center mb-8">
+        <button
+          onClick={() => setFilter("all")}
+          className={`px-6 py-2 rounded-lg font-medium transition-all duration-300 ${
+            filter === "all"
+              ? "bg-blue-500 text-white shadow-md"
+              : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+          }`}
+        >
+          All
+        </button>
+        <button
+          onClick={() => setFilter("frontend")}
+          className={`px-6 py-2 rounded-lg font-medium transition-all duration-300 ${
+            filter === "frontend"
+              ? "bg-blue-500 text-white shadow-md"
+              : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+          }`}
+        >
+          Frontend
+        </button>
+        <button
+          onClick={() => setFilter("others")}
+          className={`px-6 py-2 rounded-lg font-medium transition-all duration-300 ${
+            filter === "others"
+              ? "bg-blue-500 text-white shadow-md"
+              : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+          }`}
+        >
+          Others
+        </button>
+      </div>
+      <div className="flex justify-center items-center w-full">
+        <div className="grid grid-cols-4 gap-8">
           {filteredSkills().map((skill, index) => (
             <div
               key={index}
-              className=" bg-gray-100 rounded-xl shadow-md hover:shadow-lg transition-all flex flex-col items-center justify-center"
+              className="w-32 h-32 bg-gray-100 rounded-full shadow-md hover:shadow-lg transition-all flex flex-col items-center justify-center p-4"
             >
               <div className="flex items-center justify-center w-12 h-12 mb-2 rounded-full bg-gray-800 group-hover:scale-110 transition-transform duration-300">
                 {skill.icon}
