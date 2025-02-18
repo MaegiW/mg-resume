@@ -10,7 +10,7 @@ function WorkExperience() {
             <h3 className="font-semibold text-lg">前端工程師 - ABC 科技公司</h3>
             <p>2022 年 1 月 - 至今</p>
             <ul className="list-disc list-inside mt-2">
-              <li>負責公司主要產品的前端開發與維護</li>
+              <li>負責公司主要產品的前端開發 與維護</li>
               <li>優化網站性能，提升載入速度達 40%</li>
               <li>導入新技術框架，提升代碼品質與可維護性</li>
             </ul>
